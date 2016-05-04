@@ -16,6 +16,8 @@ RUN \
 
 COPY check_empty.sh /script/
 
+RUN chmod +x /script/check_empty.sh
+
 RUN \
   npm install -g hexo-cli
 
