@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.10
 
 MAINTAINER haocen.xu@gmail.com
 
