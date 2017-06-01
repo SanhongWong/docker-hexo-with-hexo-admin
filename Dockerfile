@@ -14,12 +14,12 @@ RUN \
   mkdir -p /blog && \
   mkdir -p /script
 
-COPY check_empty.sh /script/
+COPY init.sh /script/
 
-RUN chmod +x /script/check_empty.sh
+RUN chmod +x /script/init.sh
 
 RUN \
   npm install -g hexo-cli
 
 CMD \
-  /script/check_empty.sh
+  /script/init.sh
