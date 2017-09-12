@@ -21,5 +21,6 @@ if  [ "$(ls -A ./)" ]; then
     npm install --save hexo-generator-category
     npm install --save hexo-generator-tag
     npm install --save hexo-admin
+    npm install --save hexo-deployer-shell
     echo "Template built."
 fi
