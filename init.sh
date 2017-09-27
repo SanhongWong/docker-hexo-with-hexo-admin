@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ "$(ls -A ./run_scripts/)" ]; then
+if [ "$(find ./run_scripts/ -name '*.sh')" ]; then
    echo "Executing additional scripts..."
-   for SCRIPT in ./run_scripts/*
+   for SCRIPT in ./run_scripts/*.sh
    do
       sh $SCRIPT
    done
