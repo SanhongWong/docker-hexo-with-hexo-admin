@@ -30,8 +30,7 @@ RUN \
   echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse' >> /etc/apt/sources.list && \
   apt-get update && apt-get install -y curl && \
   curl -sL https://deb.nodesource.com/setup_6.x | bash - && \ 
-  apt-get update && apt-get install python-software-properties && add-apt-repository ppa:git-core/ppa && apt-get install xdg-utils:i386 && \
-  apt-get install -y nodejs git cron && \
+  apt-get update && apt-get install -y nodejs git cron && \
   mkdir -p /blog && \
   mkdir -p /script
 
