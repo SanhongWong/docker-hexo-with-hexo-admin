@@ -28,8 +28,9 @@ RUN \
   echo 'deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties' >> /etc/apt/sources.list && \ 
   echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe' >> /etc/apt/sources.list && \ 
   echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse' >> /etc/apt/sources.list && \
-  apt-get update && apt-get install -y curl && \
-  curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get update && apt-get install -y nodejs git cron && \
+  add-apt-repository ppa:git-core/ppa && apt-get update && apt-get install -y curl && \
+  curl -sL https://deb.nodesource.com/setup_6.x | bash - && \ 
+  apt-get update && apt-get install xdg-utils:i386 && apt-get install -y nodejs git cron && \
   mkdir -p /blog && \
   mkdir -p /script
 
