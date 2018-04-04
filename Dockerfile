@@ -9,7 +9,7 @@ VOLUME /blog
 EXPOSE 4000
 
 RUN \
-  cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone \
+  cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone && \
   apt-get update && apt-get install -y curl && \
   curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get update && apt-get install -y nodejs git cron && \
   mkdir -p /blog && \
