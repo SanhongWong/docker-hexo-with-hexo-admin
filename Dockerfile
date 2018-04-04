@@ -10,6 +10,7 @@ EXPOSE 4000
 
 RUN \
   cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone && \
+  echo 'nameserver 223.5.5.5' >> /etc/resolv.conf && \
   echo '' > /etc/apt/sources.list && \
   # echo 'deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties' >> /etc/apt/sources.list && \ 
   # echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted' >> /etc/apt/sources.list && \ 
