@@ -10,6 +10,17 @@ EXPOSE 4000
 
 RUN \
   cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone && \
+  echo '' > /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ trusty main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ trusty-security main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main multiverse restricted universe' >> /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main multiverse restricted universe' >> /etc/apt/sources.list && \
   apt-get update && apt-get install -y curl && \
   curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get update && apt-get install -y nodejs git cron && \
   mkdir -p /blog && \
