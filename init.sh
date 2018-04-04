@@ -15,6 +15,7 @@ if  [ "$(ls -A ./)" ]; then
     hexo server
   else
     hexo init /blog
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
     npm install --save hexo-generator-sitemap
     npm install --save hexo-generator-index
     npm install --save hexo-generator-archive
