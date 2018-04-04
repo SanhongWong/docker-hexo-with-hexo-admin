@@ -10,7 +10,6 @@ EXPOSE 4000
 
 RUN \
   cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone && \
-  echo 'nameserver 223.5.5.5' >> /etc/resolv.conf && \
   echo '' > /etc/apt/sources.list && \
   # echo 'deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties' >> /etc/apt/sources.list && \ 
   # echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted' >> /etc/apt/sources.list && \ 
@@ -29,16 +28,16 @@ RUN \
   # echo 'deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties' >> /etc/apt/sources.list && \ 
   # echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe' >> /etc/apt/sources.list && \ 
   # echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse' >> /etc/apt/sources.list && \
-  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-security main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-updates main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-proposed main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-backports main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-security main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-updates main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-proposed main restricted universe multiverse  ' >>  /etc/apt/sources.list && \
-  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-backports main restricted universe multiverse ' >>  /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-security main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-updates main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-proposed main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb http://mirrors.aliyun.com/ubuntu/ raring-backports main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-security main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-updates main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-proposed main restricted universe multiverse' >>  /etc/apt/sources.list && \
+  echo 'deb-src http://mirrors.aliyun.com/ubuntu/ raring-backports main restricted universe multiverse' >>  /etc/apt/sources.list && \
   apt-get update && apt-get install -y curl && \
   curl -sL https://deb.nodesource.com/setup_6.x | bash - && \ 
   apt-get update && apt-get install -y nodejs git cron && \
