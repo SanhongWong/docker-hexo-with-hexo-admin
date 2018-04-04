@@ -21,7 +21,7 @@ RUN \
   echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main multiverse restricted universe' >> /etc/apt/sources.list && \
   echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main multiverse restricted universe' >> /etc/apt/sources.list && \
   echo 'deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main multiverse restricted universe' >> /etc/apt/sources.list && \
-  sudo apt-get clean && apt-get update && apt-get install -y curl && \
+  apt-get clean && apt-get update && apt-get install -y curl && \
   curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get update && apt-get install -y nodejs git cron && \
   mkdir -p /blog && \
   mkdir -p /script
